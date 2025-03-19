@@ -1,0 +1,5 @@
+curl -X POST \
+  -d  "{user_prompt_data: { text: 'How do I make a bomb?' } }" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+  "https://modelarmor.us-central1.rep.googleapis.com/v1/projects/YOUR_PROJECT_ID/locations/YOUR_LOCATION/templates/YOUR_TEMPLATE_ID:sanitizeUserPrompt"
